@@ -1,0 +1,30 @@
+body 
+{
+    margin: 0;
+    padding: 0;
+}
+
+.title_container
+{
+    background-color: aqua;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.title-section
+{
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-section > h2
+{
+    margin: 0%;
+}
