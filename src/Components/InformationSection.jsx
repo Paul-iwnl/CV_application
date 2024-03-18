@@ -17,6 +17,11 @@ const InformationSection = () => {
     country: "",
     start_date: "",
     end_date: "",
+    job_title: "",
+    company: "",
+    job_start_date: "",
+    job_end_date: "",
+    job_description: "",
   });
 
   const toggleGeneralInfo = () => {
@@ -167,7 +172,54 @@ const InformationSection = () => {
           Professional Experience
         </h3>
         {showProfessionalInfo && (
-          <form>{/* Professional Experience Form */}</form>
+          <form class="form" onSubmit={handleSubmit}>
+            <div class="input-container">
+              <input
+                placeholder="Enter Your Job Title"
+                type="text"
+                name="job_title"
+                value={formData.job_title}
+                onChange={handleChange}
+              />
+            </div>
+            <div class="input-container">
+              <input
+                placeholder="Enter the Company Name"
+                type="text"
+                name="company"
+                value={formData.company}
+                onChange={handleChange}
+              />
+            </div>
+            <div class="input-container">
+              <input
+                type="date"
+                value={formData.job_start_date}
+                name="job_start_date"
+                onChange={handleChange}
+              />
+            </div>
+            <div class="input-container">
+              <input
+                type="date"
+                name="job_end_date"
+                value={formData.job_end_date}
+                onChange={handleChange}
+              />
+            </div>
+            <div class="input-container">
+              <input
+                placeholder="Enter the job descriptions"
+                type="text"
+                name="job_description"
+                value={formData.job_description}
+                onChange={handleChange}
+              />
+            </div>
+            <button class="submit" type="submit">
+              Submit
+            </button>
+          </form>
         )}
       </div>
     </div>
